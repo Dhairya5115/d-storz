@@ -699,7 +699,7 @@ export default function DStorzHome() {
 
       {/* NAVBAR */}
       <nav className="navbar">
-        <a href="#" className="logo">D<span>-</span>Storz</a>
+        <a href="/" className="logo">D<span>-</span>Storz</a>
         <div className="nav-right">
           <input
             className="search-input"
@@ -707,6 +707,15 @@ export default function DStorzHome() {
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
           />
+          <a href="/admin" style={{
+            fontSize: "0.78rem",
+            color: "var(--muted)",
+            textDecoration: "none",
+            padding: "0.4rem 0.8rem",
+            border: "1px solid var(--border)",
+            borderRadius: "100px",
+            transition: "all 0.2s",
+          }}>⚙️ Admin</a>
           <button className="cart-btn" onClick={() => setCartOpen(true)}>
             🛒 Cart
             {cart.length > 0 && <span className="cart-count">{cart.length}</span>}

@@ -595,7 +595,9 @@ export default function AdminDashboard() {
         {/* SIDEBAR */}
         <aside className="sidebar">
           <div className="sidebar-logo">
-            D<span>-</span>Storz
+            <a href="/" style={{ color: "white", textDecoration: "none", display: "flex", alignItems: "center", gap: "0.5rem", flex: 1 }}>
+              D<span>-</span>Storz
+            </a>
             <span className="sidebar-badge">ADMIN</span>
           </div>
 
@@ -640,11 +642,25 @@ export default function AdminDashboard() {
         {/* MAIN CONTENT */}
         <main className="main">
           <div className="topbar">
-            <div className="topbar-title">
-              {tab === "dashboard" && "Dashboard"}
-              {tab === "products" && "Products"}
-              {tab === "orders" && "Orders"}
-              {tab === "add-product" && "Add Product"}
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+              <a href="/" style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.4rem",
+                fontSize: "0.82rem",
+                color: "var(--muted)",
+                textDecoration: "none",
+                padding: "0.35rem 0.8rem",
+                border: "1px solid var(--border)",
+                borderRadius: "100px",
+                transition: "all 0.2s",
+              }}>← Store</a>
+              <div className="topbar-title">
+                {tab === "dashboard" && "Dashboard"}
+                {tab === "products" && "Products"}
+                {tab === "orders" && "Orders"}
+                {tab === "add-product" && "Add Product"}
+              </div>
             </div>
             <div className="topbar-right">
               <div className="notification-dot">🔔<span className="dot" /></div>
